@@ -1,0 +1,6 @@
+D:\ABC\pRO_SAMPLE\pRO_SAMPLE\bin\pRO_SAMPLE.dll.config
+D:\ABC\pRO_SAMPLE\pRO_SAMPLE\bin\pRO_SAMPLE.dll
+D:\ABC\pRO_SAMPLE\pRO_SAMPLE\bin\pRO_SAMPLE.pdb
+D:\ABC\pRO_SAMPLE\pRO_SAMPLE\obj\Debug\pRO_SAMPLE.csprojResolveAssemblyReference.cache
+D:\ABC\pRO_SAMPLE\pRO_SAMPLE\obj\Debug\pRO_SAMPLE.dll
+D:\ABC\pRO_SAMPLE\pRO_SAMPLE\obj\Debug\pRO_SAMPLE.pdb
