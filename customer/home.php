@@ -376,7 +376,7 @@ else {include("logoutheader.php");}
               <div class="member-info">
                 <h4>Walter White</h4>
                 <span>Master Chef</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                <p>Walter White is our culinary genius, a master of the kitchen with a passion for creating exquisite cakes and pastries. His creativity and skill ensure that every dessert that comes out of our bakery is a work of art.</p>
               </div>
             </div>
           </div><!-- End Chefs Member -->
@@ -393,9 +393,9 @@ else {include("logoutheader.php");}
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
+                <h4>skyler white</h4>
                 <span>Patissier</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                <p>Skyler white is our resident patissier, dedicated to the art of creating delectable pastries and desserts. Her precision and attention to detail result in sweet delights that are as beautiful as they are delicious.</p>
               </div>
             </div>
           </div><!-- End Chefs Member -->
@@ -412,9 +412,9 @@ else {include("logoutheader.php");}
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
+                <h4>Jesse pinkman</h4>
                 <span>Cook</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                <p>Jesse pinkman is our skilled cook who adds a special touch to all our baked goods. With his expertise in the kitchen, he ensures that every bite is filled with the warmth and comfort of homemade goodness.</p>
               </div>
             </div>
           </div><!-- End Chefs Member -->
@@ -604,7 +604,59 @@ else {include("logoutheader.php");}
 
   </main>
   <!-- End #main -->
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .slider_bg_1 {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            transition: opacity 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider d-flex align-items-center slider_bg_1 overlay" style="background-image: url('img/banner/childbg.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text">
+                                <span>Empower your child's health.</span>
+                                <h3><span>Vaccination builds immunity.</span><br>Protect from diseases.</br></h3>
+                                <a href="#" class="boxed-btn5">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        var images = [
+            'url("img/banner/childbg.png")',
+            'url("img/banner/anotherimage.png")', // Add the paths to your other images
+        ];
+
+        var currentIndex = 0;
+        var sliderBg = document.querySelector(".slider_bg_1");
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            var nextImage = images[currentIndex];
+            sliderBg.style.backgroundImage = nextImage;
+        }
+
+        setInterval(changeImage, 2000); // Change image every 2 seconds
+    </script>
+</body>
+</html>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 

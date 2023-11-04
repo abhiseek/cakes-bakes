@@ -10,47 +10,7 @@ $dao=new DataAccess();
 
 
 ?>
-<?php /*?><?php
 
-    $q="select * from category";
-
-$info=$dao->query($q);
-
-print_r($info);
-
- echo "<br/>";
-
-$arrlength = count($info);
-echo $arrlength;
- echo "<br/>";
-
-
-$i=0;
-
-while($i<count($info))
-{
-echo $info[$i]["sid"];
-echo"   ";
-echo $info[$i]["sname"];
-
-echo "<br/>";
-$i++;
-}
-
-foreach($info as $key=>$value)
-{
-    foreach($value as $key1=>$in)
-    {
-        echo $key1." --> ".$in;
-    }
-    echo "<br/>";
-}
-
-<a href="<?= BASE_URL ?>student/course.php?id=<?= $val['c_id'] ?>" class="button_outline">Details</a>
-
-?>
-
-<?php */?>
 
 	<div class="container">
 	
@@ -68,6 +28,7 @@ if(isset($_SESSION['email']))
 
 <?php }
 else {include("logoutheader.php");}
+
 ?>
 				 <h3 class="title-w3-agileits title-black-wthree" data-aos="fade-up">CATEGORY</h3>
 						<div class="priceing-table-main">
@@ -103,7 +64,7 @@ $info=$dao->query($q);
 
 								     </ul>
 							</div>
-							<div class="price-selet">
+						<div class="price-selet">
                             
 			<a href="displayitems.php?id=<?= $info[$i]["cat_id"]?>" >VIEW</a>
 							</div>
