@@ -12,7 +12,6 @@ $dao=new DataAccess();
 ?>
 <?php /*?><?php
 
-
     $q="select * from category";
 
 $info=$dao->query($q);
@@ -53,23 +52,24 @@ foreach($info as $key=>$value)
 
 <?php */?>
 
+	<div class="container">
 	
-	<div class="plans-section" id="rooms">
-				 <div class="container">
+
+	
 <?php    
 if(isset($_SESSION['email']))
 { 
-	include("userheader2.php");
+	include("loginheader.php");
    $name=$_SESSION['email'];
 
 ?>
 
- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7>
+ <!-- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7> -->
 
 <?php }
-else {include("userheader.php");}
+else {include("logoutheader.php");}
 ?>
-				 <h3 class="title-w3-agileits title-black-wthree">CATEGORY</h3>
+				 <h3 class="title-w3-agileits title-black-wthree" data-aos="fade-up">CATEGORY</h3>
 						<div class="priceing-table-main">
             <?php
 			
@@ -119,5 +119,5 @@ $info=$dao->query($q);
 	</div>
 	
 	
-		<?php include("userfooter.php");	?>
+		<?php include("footer.html");	?>
 	

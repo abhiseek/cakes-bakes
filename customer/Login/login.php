@@ -52,6 +52,7 @@ if(isset($_POST['login']))
            
             $_SESSION['email']=$info['uemail'];
 			$_SESSION['user_id']=$info['user_id'];
+			$_SESSION['fname']=$info['fname'];
 $a=$_SESSION['email'];
 
 	// echo "<script> alert('$a');</script> ";	
@@ -80,7 +81,7 @@ $a=$_SESSION['email'];
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 				<!-- <img src="images/icons8-cake.gif" alt="IMG">  -->
-					 <img src="images/png.png" alt="IMG">
+					 <img width="wrap" height="wrap" src="images/png.png" alt="IMG">
 				</div>
 
 				<form method="POST" class="login100-form validate-form">

@@ -1,5 +1,6 @@
-<?php include("userheader.php");	?>
-<?php require('../config/autoload.php'); 
+<?php require('../config/autoload.php'); 	?>
+<?php 
+include("loginheader.php");
 include("dbcon.php");
 ?>
 
@@ -39,7 +40,7 @@ $result = $conn->query($sql);
             <div class="col-md-12">
             
             <H1><center> CART DETAILS </center> </H1>
-                <table  border="1" class="table" style="margin-top:100px;">
+                <table  border="1" class="table table-hover" style="margin-top:100px;">
                     <tr>
                         
                         <th>Sl No</th>

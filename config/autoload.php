@@ -1,8 +1,8 @@
 <?php 
 
 //your project path goes here
-define("BASE_URL","http://localhost/keki/");
-define("BASE_PATH","c:vault/WAMP/www/keki/");
+define("BASE_URL","http://localhost/cakes&bakes/");
+define("BASE_PATH","c:vault/WAMP/www/cakes&bakes/");
 
 //set your timezone here
 date_default_timezone_set('asia/kolkata');

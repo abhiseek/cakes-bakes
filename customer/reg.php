@@ -17,7 +17,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Register Form</title>
 
     <!-- Icons font CSS-->
     <link href="reg/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -86,10 +86,10 @@ if(isset($_POST['register']))
 			if($dao->insert($data,'users'))
 			{
 				//$msg="Inserted Successfully";
-                echo "Inserted Successfully";
+                echo "<script> alert('Registration Sucessfully');</script> ";
 			}
 			else
-				$msg="insertion failed";
+				$msg="registration failed";
 		}
 		
 		
@@ -100,7 +100,7 @@ if(isset($_POST['register']))
 if(isset($_POST['home']))
 {
 //echo "<script> alert('New zxx created successfully');</script> ";
-   echo"<script> location.replace('displaycategory.php'); </script>";
+   echo"<script> location.replace('home.php'); </script>";
 
 }
 

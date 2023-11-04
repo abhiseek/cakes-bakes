@@ -1,10 +1,18 @@
 
-
-<?php include("userheader.php");	?>
-
-
-
 <?php require('../config/autoload.php'); ?>
+<?php    
+if(isset($_SESSION['email']))
+{ 
+	include("loginheader.php");
+   $name=$_SESSION['email'];
+
+?>
+
+ <!-- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7> -->
+
+<?php }
+else {include("logoutheader.php");}
+?>
 
 <?php
 $dao=new DataAccess();
@@ -18,10 +26,10 @@ if(isset($_SESSION['email']))
    $name=$_SESSION['email'];
 ?>
 
- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7>
+ <!-- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7> -->
 
 <?php } ?>
-<h3 class="title-w3-agileits title-black-wthree">ITEMS</h3>
+<h3 class="title-w3-agileits title-black-wthree" data-aos="fade-up">ITEMS</h3>
 						<div class="priceing-table-main">
             <?php
 			$cat_id=$_GET['id']; 
@@ -71,5 +79,5 @@ $info=$dao->query($q);
 	</div>
 	
 	
-		<?php include("userfooter.php");	?>
+		<?php include("footer.html");	?>
 	

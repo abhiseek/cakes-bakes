@@ -75,8 +75,7 @@ return false;
 <?php
 if(isset($_POST["next"]))
 {
-	
-	 header('location:printbill.php');
+	echo"<script> location.replace('printbill.php'); </script>";
 	
 	 }
 

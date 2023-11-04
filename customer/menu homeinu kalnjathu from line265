@@ -1,0 +1,295 @@
+ <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+<!-- 
+        <div class="section-header">
+          <h2>Our Menu</h2>
+          <p>Check Our <span>Yummy Menu</span></p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+     <?php 
+
+$dao=new DataAccess;
+        $q="select * from index_cat order by cat_id;";
+          $info=$conn->query($q);
+          $data=[];
+          while($raw=$info->fetch_assoc())
+          $data[]=$raw;
+          // print_r($data) ;
+          $r='active';
+     foreach($data as $row)
+     {
+      $id=$row['cat_id'];
+      $name=$row['cat_name'];
+      echo "
+      <li class=\"nav-item\">
+      <a class=\"nav-link  $r \" data-bs-toggle=\"tab\" data-bs-target=\"#$id\">
+        <h4>$name</h4>
+      </a>
+    </li>";
+    $r='';
+    }
+     
+     ?>
+      </ul>
+  
+
+
+
+            
+<div class="tab-content" >
+    <?php
+    $cat="select * from item  i join index_cat as cat on cat.cat_id=i.cat_id order by cat.cat_id;";
+          $info=$conn->query($cat);
+          $data=[];
+          while($raw=$info->fetch_assoc())
+          $data[]=$raw;
+        $p='';
+        $r='active';
+        echo "<div class=\"row gy-5\">";
+    foreach($data as $row)
+    {   $id=$row['cat_id'];
+        $i_name=$row['i_name'];
+        $i_img=$row['i_img'];
+        $i_price=$row['i_price'];
+        $cat_name=$row['cat_name'];
+        $show='show';
+        if ($cat_name != $p)
+        {
+
+          
+          echo "<div class=\" tab-pane fade $show active $r\" id=\"$id\">
+
+          <div class=\"tab-header text-center\">
+            <p>Menu</p>
+            <h3>$cat_name</h3>
+          </div>";
+        }
+  echo "
+    <div class=\"col-lg-4 menu-item\">
+      <a href=\"../singleitem.php?id=$row[iid]\" ><img src=\"../../uploads/$i_img\" class=\"menu-img img-fluid\" alt=\"\"></a>
+      <h4>$i_name</h4>
+
+      <p class=\"price\">
+        $i_price
+      </p>
+    </div>";
+    $p=$cat_name;
+    $r='';
+    $show='';
+    }
+    echo "</div> ";
+?>  -->
+
+
+
+
+
+
+
+
+<div class="section-title">
+          <h2>Time slots</h2>
+          </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+            <li class="nav-item">
+                <a class="nav-link" >Available date</a>
+              </li>
+              <?php 
+              
+              $dao=new DataAccess;
+              $q="select * from index_cat order by cat_id;";
+                $info=$conn->query($q);
+                $data=[];
+                while($raw=$info->fetch_assoc())
+                $data[]=$raw;
+                // print_r($data) ;
+                $r='active';
+           foreach($data as $row)
+           {
+            $id=$row['cat_id'];
+            $name=$row['cat_name'];
+            echo "
+               
+                 
+             
+                 
+                 <li class=\"nav-item\">
+                <a class=\"nav-link\" data-bs-toggle=\"tab\" href=\"#$name\"> $name </a>
+              </li>";
+                
+           }
+              ?>
+            </ul>
+    
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+           
+        
+            <?php
+    $cat="select * from item  i join index_cat as cat on cat.cat_id=i.cat_id order by cat.cat_id;";
+          $info=$conn->query($cat);
+          $data=[];
+          while($raw=$info->fetch_assoc())
+          $data[]=$raw;
+        $p='';
+        $r='active';
+   
+    foreach($data as $row)
+    {   $id=$row['cat_id'];
+        $i_name=$row['i_name'];
+        $i_img=$row['i_img'];
+        $i_price=$row['i_price'];
+        $cat_name=$row['cat_name'];
+        $show='show';
+        if ($cat_name != $p)
+        {  
+          echo "<div class=\"tab-pane $r\" id=\"$cat_name\">;
+        ";
+        echo "<div class=\"tab-header text-center\">
+            <p>Menu</p>
+            <h3>$cat_name</h3>
+          </div>";
+                  
+                
+                
+        }
+                    echo "<div class=\"row gy-4\">
+                    <div class=\"col-lg-8 details order-2 order-lg-1\">
+                    ";
+                 
+                 echo "  
+                    <a href=\"../singleitem.php?id=$row[iid]\" ><img src=\"../../uploads/$i_img\" class=\"menu-img img-fluid\" alt=\"\"></a>
+                    <h4>$i_name</h4>
+              
+                    <p class=\"price\">
+                      $i_price
+                    </p>
+                  ";
+                
+             
+                    echo "</div>
+                    <div class=\"col-lg-4 text-center order-1 order-lg-2\">
+                    
+                    </div>
+                    </div>
+                    </div>";
+                  
+                    $p=$cat_name;
+                   
+                    $show='';
+                }
+                
+                ?>
+                </div></div>
+
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
+
+
+
+
+
+
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Departments</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Menu</a>
+              </li>
+
+              <?php 
+                 $dao=new DataAccess;
+                 $q="select * from index_cat order by cat_id;";
+                   $info=$conn->query($q);
+                   $data=[];
+                   while($raw=$info->fetch_assoc())
+                   $data[]=$raw;
+                   // print_r($data) ;
+                   $r='active';
+              foreach($data as $row)
+              {
+               $id=$row['cat_id'];
+               $name=$row['cat_name'];
+              
+              echo "
+              <li class=\"nav-item\">
+                <a class=\"nav-link\" data-bs-toggle=\"tab\" href=\"#$name\">$name</a>
+              </li>";
+              }
+             ?>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              
+
+              <?php 
+
+
+$cat="select * from item  i join index_cat as cat on cat.cat_id=i.cat_id order by cat.cat_id;";
+$info=$conn->query($cat);
+$data=[];
+while($raw=$info->fetch_assoc())
+$data[]=$raw;
+
+$p='';
+$r='active';
+
+foreach($data as $row)
+{   $id=$row['cat_id'];
+$i_name=$row['i_name'];
+$i_img=$row['i_img'];
+$i_price=$row['i_price'];
+$cat_name=$row['cat_name'];
+$show='show';
+if ($cat_name != $p)
+{  
+echo "<div class=\"tab-pane\" id=\"$cat_name\">;
+";
+echo "
+  <p>Menu</p>
+  <h3>$cat_name</h3>
+</div>";
+}
+              echo "
+              
+                <div class=\"row gy-4\">
+                  <div class=\"col-lg-8 details order-2 order-lg-1\">
+                    <h3>Et blanditiis nemo veritatis excepturi</h3>
+                    <p class=\"fst-italic\">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                  </div>
+                  <div class=\"col-lg-4 text-center order-1 order-lg-2\">
+                    <img src=\"assets/img/departments-2.jpg\" alt=\"\" class=\"img-fluid\">
+                  </div>
+                </div>
+              </div>";
+$p=$cat_name;
+            }
+
+              ?>
+             
+            </div>
+          </div> 
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+

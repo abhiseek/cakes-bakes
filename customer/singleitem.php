@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include('../config/autoload.php'); ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
@@ -23,12 +23,25 @@ function showtotal() {
 
 <body>
 
-<?php include("userheader.php");	
+<?php //include("loginheader.php");	
 include("../admin/dbcon.php");
 
 ?>
+<?php    
+if(isset($_SESSION['email']))
+{ 
+	include("loginheader.php");
+   $name=$_SESSION['email'];
 
-<?php require('../config/autoload.php'); 
+?>
+
+ <!-- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7> -->
+
+<?php }
+else {include("logoutheader.php");}
+?>
+<?php 
+
 
 $iid = "";
 $iname = "";
@@ -47,7 +60,8 @@ if(isset($_POST["btn_insert"]))
 {
     if(!isset($_SESSION['email']))
     {
-        header('location:login/login.php');
+       
+        echo"<script> location.replace('login/login.php'); </script>";
    }
    else
    {
@@ -63,7 +77,7 @@ $itemname = $iname;
 $user_id=$_SESSION["user_id"];
 $price = $_POST["offerprice"];
 $qty = $_POST["qty"];
-echo $qty;
+//echo $qty;
 $total = $_POST["total"];
 $status=1;
 $date1= $_POST["todate"];
@@ -74,7 +88,7 @@ $sql = "INSERT INTO cart(user_id,uemail,itid,i_name,offerprice,qty,total,status,
 }
 if($conn->query($sql))
 {
- header('location:viewcart.php');
+ echo"<script>location.replace('viewcart.php');</script>";
 }
 
 }
@@ -173,5 +187,6 @@ if(isset($_SESSION['email']))
     </div>
     </form>
 </body>
-
 </html>
+
+<?php include("footer.html");	?>

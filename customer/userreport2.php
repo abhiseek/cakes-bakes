@@ -1,5 +1,6 @@
-<?php include("userheader.php");	?>
-<?php require('../config/autoload.php'); 
+<?php require('../config/autoload.php'); ?>
+<?php include("loginheader.php");	
+
 include("dbcon.php");
 ?>
 
@@ -9,7 +10,7 @@ $dao=new DataAccess();
 
    if(isset($_POST["purchase"]))
 {
-     header('location:adminhome.php');
+     header('location:home.php');
 }
 if(!isset($_SESSION['email']))
    {

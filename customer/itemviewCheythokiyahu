@@ -1,0 +1,33 @@
+
+<div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+    <?php
+    $dao=new DataAccess;
+    $cat="select * from item  i join index_cat as cat on cat.cat_id=i.cat_id;";
+          $info=$conn->query($cat);
+          $data=[];
+          while($raw=$info->fetch_assoc())
+          $data[]=$raw;
+           print_r($data);
+    foreach($data as $row)
+    {
+        $i_name=$row['i_name'];
+        $i_img=$row['i_img'];
+        $i_price=$row['i_price'];
+  echo "<div class="tab-pane fade active show" id="1">
+<div class="tab-header text-center">
+<p>Menu</p>
+<h3>$name</h3>
+</div>
+<div class="row gy-5">
+<div class="col-lg-4 menu-item">
+<a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
+<h4>$i_name</h4>
+<!-- <p class="ingredients">
+Lorem, deren, trataro, filede, nerada
+</p> -->
+<p class="price">
+$i_price
+</p>
+</div>";
+    }
+?>

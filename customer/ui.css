@@ -11,11 +11,13 @@ body{
     display: inline-block;
     height: 50%;
     width: 100%;
-    background:rgb(53, 50, 49);
-    color: rgb(0, 0, 0);
+    background:rgb(255, 255, 255);
+    color: rgb(20, 17, 17);
+    
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .buttons{
     display: block;
     width: 20%;
@@ -40,7 +42,7 @@ body{
     padding: 10px  0 10px 0;
     height: 50%;
     width: 100%;
-    background: aquamarine;
+    background: rgb(255, 255, 255);
     color: aliceblue;
     text-align: center;
 }

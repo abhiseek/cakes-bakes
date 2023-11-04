@@ -1,5 +1,7 @@
-<?php include("userheader2.php");	?>
-<?php require('../config/autoload.php'); 
+<?php 
+require('../config/autoload.php'); ?>
+<?php
+ include("loginheader.php");	
 include("dbcon.php");
 ?>
 
@@ -9,11 +11,12 @@ $name=$_SESSION['email'] ;
  if(isset($_POST["payment"]))
 {
      echo "hai";
-	 header('location:payment.php');
+	 echo"<script> location.replace('payment.php'); </script>";
+    //  echo"<script> location.replace('invoice.php'); </script>";
 }
    if(isset($_POST["purchase"]))
 {
-     header('location:displaycategory.php');
+     echo"<script> location.replace('displaycategory.php'); </script>";
 }
 if(!isset($name))
    {

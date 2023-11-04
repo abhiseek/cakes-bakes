@@ -47,7 +47,7 @@ if ($conn->query($sql11) === TRUE && $conn->query($sql12) === TRUE) {
  <div class="table-responsive">
                                 <table border="1"  id="printTable" style="width:100%" >
                                     <thead>
-                          <center> KEKI </center>
+                          <center> Cakes&Bakes. </center>
                            <center> N.PARAVUR </center>
                             <tr>
                              <th style="text-align:left">BillNo:<?=$oid?></th>
@@ -108,7 +108,7 @@ $result123 = $conn->query($sql123);
 
 <input type="button" onclick="printData();" value="PRINT"  />
 
-<a href="displaycategory.php">HOME</a>
+<a href="home.php">HOME</a>
 </div>
 </div>
 </div>
