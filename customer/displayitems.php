@@ -44,8 +44,8 @@ $info=$dao->query($q);
 		?>		 <div class="col-md-3 price-grid">
 					<div class="price-block agile">
 						<div class="price-gd-top">
-						<img style="width:300; height:300" src=<?php echo BASE_URL."uploads/".$info[$i]["i_img"]; ?> alt=" " class="img-responsive" />
-							<?php /*?> <h4>Deluxe Room</h4><?php */?>
+						<img style="width:300px; height:300px;" src=<?php echo BASE_URL."uploads/".$info[$i]["i_img"]; ?> alt=" " class="img-responsive" />
+							
                               <h4><?php echo $info[$i]["i_name"]?></h4> 
                               
                              

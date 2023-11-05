@@ -2,7 +2,7 @@
 <?php    
 if(isset($_SESSION['email']))
 { 
-	include("loginheader.php");
+	include("loginheaderhome.php");
    $name=$_SESSION['email'];
 
 ?>
@@ -10,24 +10,11 @@ if(isset($_SESSION['email']))
  <!-- <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7> -->
 
 <?php }
-else {include("logoutheader.php");}
+else {include("logoutheaderhome.php");}
 ?>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-      <!-- <div class="row justify-content-between gy-5">
-        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-          <h2 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
-          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
-        </div>
-        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-          <img src="assets/img/hero-img.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
-        </div>
-      </div> -->
       <video autoplay muted width="100%" hight="100px" loop>
   <source src="assets/vid/cakefinalv3.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -75,7 +62,59 @@ else {include("logoutheader.php");}
   Your browser does not support the video tag.
 </video> -->
 
-                <img src="assets/img/2.jpg" class="img-fluid" alt="">
+                <!-- <img src="assets/img/2.jpg" class="img-fluid" alt=""> -->
+                <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .slider_bg_1 {
+            height: 300px; /* Set the appropriate height */
+            width: 500px; /* Set the appropriate width */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            transition: background-image 2s ease-in-out; /* Add a smooth transition effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <div class="single_slider d-flex align-items-center slider_bg_1 overlay" style="background-image: url('assets/img/banner/1.jpg');">
+               
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to create an image slider
+        function createImageSlider(images, targetElement, interval) {
+            const sliderBg = document.querySelector(targetElement);
+            let currentIndex = 0;
+
+            function changeImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                sliderBg.style.backgroundImage = images[currentIndex];
+            }
+
+            setInterval(changeImage, interval);
+        }
+
+        const images = [
+            'url("assets/img/banner/1.jpg")',
+            'url("assets/img/banner/2.jpg")',
+            'url("assets/img/banner/3.jpg")',
+            'url("assets/img/banner/4.jpg")',
+            'url("assets/img/banner/5.jpg")',
+            'url("assets/img/banner/6.jpg")',
+        ];
+
+        createImageSlider(images, '.slider_bg_1',1800);
+    </script>
+</body>
+</html>
+
+
                
               </div>
             </div>
@@ -322,7 +361,7 @@ else {include("logoutheader.php");}
 
             <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-1.jpg)">
               <h3>Custom Parties</h3>
-              <div class="price align-self-start">$99</div>
+              <div class="price align-self-start">2000/-</div>
               <p class="description">
                 Quo corporis voluptas ea ad. Consectetur inventore sapiente ipsum voluptas eos omnis facere. Enim facilis veritatis id est rem repudiandae nulla expedita quas.
               </p>
@@ -330,7 +369,7 @@ else {include("logoutheader.php");}
 
             <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">
               <h3>Private Parties</h3>
-              <div class="price align-self-start">$289</div>
+              <div class="price align-self-start">1889/-</div>
               <p class="description">
                 In delectus sint qui et enim. Et ab repudiandae inventore quaerat doloribus. Facere nemo vero est ut dolores ea assumenda et. Delectus saepe accusamus aspernatur.
               </p>
@@ -369,7 +408,7 @@ else {include("logoutheader.php");}
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/abhish.3k/"><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -388,7 +427,7 @@ else {include("logoutheader.php");}
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/abhish.3k/"><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -407,7 +446,7 @@ else {include("logoutheader.php");}
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/abhish.3k/"><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -605,58 +644,10 @@ else {include("logoutheader.php");}
   </main>
   <!-- End #main -->
   
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .slider_bg_1 {
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-            background-position: center;
-            opacity: 1;
-            transition: opacity 2s;
-        }
-    </style>
-</head>
-<body>
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <div class="single_slider d-flex align-items-center slider_bg_1 overlay" style="background-image: url('img/banner/childbg.png');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text">
-                                <span>Empower your child's health.</span>
-                                <h3><span>Vaccination builds immunity.</span><br>Protect from diseases.</br></h3>
-                                <a href="#" class="boxed-btn5">Book Appointment</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        var images = [
-            'url("img/banner/childbg.png")',
-            'url("img/banner/anotherimage.png")', // Add the paths to your other images
-        ];
-
-        var currentIndex = 0;
-        var sliderBg = document.querySelector(".slider_bg_1");
-
-        function changeImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            var nextImage = images[currentIndex];
-            sliderBg.style.backgroundImage = nextImage;
-        }
-
-        setInterval(changeImage, 2000); // Change image every 2 seconds
-    </script>
 </body>
 </html>
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
@@ -701,7 +692,7 @@ else {include("logoutheader.php");}
           <div class="social-links d-flex">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/abhish.3k/" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>

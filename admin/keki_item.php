@@ -34,7 +34,7 @@ if(isset($_POST["insert"]))
 if($validator->validate($_POST))
 {
 	
-    if($filename=$file->doUploadRandom($_FILES['i_img'],array('.jpg','.png','.jpeg ','.gif'),100000,1,'../uploads'))	
+    if($filename=$file->doUploadRandom($_FILES['i_img'],array('.jpg','.png','.jpeg ','.gif'),10000000,1,'../uploads'))	
     {
 
 $data=array(
@@ -49,7 +49,7 @@ $data=array(
 
     );
 
-    print_r($data);
+    //print_r($data);
   
     if($dao->insert($data,"item"))
     {

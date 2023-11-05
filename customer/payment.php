@@ -76,6 +76,7 @@ return false;
 if(isset($_POST["next"]))
 {
 	echo"<script> location.replace('printbill.php'); </script>";
+  // echo"<script> location.replace('invoice.php'); </script>";
 	
 	 }
 

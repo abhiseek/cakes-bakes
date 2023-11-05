@@ -16,7 +16,7 @@ $labels=array('cat_id'=>"category id","cat_name"=>"category name","cat_img"=>"ca
 $rules=array(
     "cat_id"=>array("required"=>true),
     "cat_name"=>array("required"=>true,"minlength"=>3,"maxlength"=>30,"alphaspaceonly"=>true),
-    "cat_img"=>array("required"=>true,"minlength"=>2,"maxlength"=>100,"integeronly"=>true)
+    "cat_img"=>array("required"=>true)
 
      
 );

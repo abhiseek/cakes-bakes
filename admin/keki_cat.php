@@ -31,7 +31,7 @@ if(isset($_POST["insert"]))
 if($validator->validate($_POST))
 {
 	
-    if($filename=$file->doUploadRandom($_FILES['cat_img'],array('.jpg','.png','.jpeg ','.gif'),100000,1,'../uploads'))	
+    if($filename=$file->doUploadRandom($_FILES['cat_img'],array('.jpg','.png','.jpeg ','.gif'),100000000,1,'../uploads'))	
     {
 
 $data=array(

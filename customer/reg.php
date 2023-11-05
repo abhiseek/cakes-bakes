@@ -1,12 +1,5 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
 
     <!-- Required meta tags-->
@@ -57,7 +50,7 @@ $labels=array('fname'=>"First Name","lname"=>"Last Name","email"=>"Email Id","ph
 
 $rules=array(
     "fname"=>array("required"=>true,"minlength"=>3,"maxlength"=>30,"alphaspaceonly"=>true),
-    "lname"=>array("required"=>true,"minlength"=>1,"maxlength"=>30,"alphaonly"=>true),
+    "lname"=>array("required"=>true,"minlength"=>1,"maxlength"=>30,"alphaspaceonly"=>true),
     "email"=>array("required"=>true,"email"=>true,"unique"=>array("field"=>"uemail","table"=>"users")),
     
     "phone"=>array("required"=>true,"integeronly"=>true,"minlength"=>10,"maxlength"=>10),
@@ -131,7 +124,7 @@ if(isset($_POST['home']))
                                
                         </div>
                          <div class="input-group">
-                             <?= $form->textBox('email',array("placeholder"=>"Email")); ?>
+                             <?= $form->textBox('email',array("placeholder"=>"Email id")); ?>
                            <span class="valErr"><?= $validator->error('email'); ?></span>
                                
                                

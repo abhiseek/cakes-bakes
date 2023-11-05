@@ -74,10 +74,10 @@ $user=$_SESSION['fname'];
           <li><a href="home.php">Home</a></li>
           <!-- <li><a href="home.php/#about">About</a></li> -->
           <li><a href="displaycategory.php">Menu</a></li>
-          <li><a href="<?=BASE_URL?>customer/home.php/#about">About</a></li>
+          <!-- <li><a href="<?=BASE_URL?>customer/home.php/#about">About</a></li>
           <li><a href="#events">Events</a></li>
           <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#gallery">Gallery</a></li> -->
           <li><a href="viewcart.php">view cart</a></li>
           <li><a href="userreport2.php">ordered</a></li>
           <li><a href="viewcancel.php">cancel</a></li>

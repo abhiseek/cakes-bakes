@@ -10,7 +10,6 @@
                       display: flex;
                       justify-content: center;
                     }
-                    
                     c-welcome {
                       position: absolute;
                       width: max-content;
@@ -25,7 +24,15 @@
   <?php
 require('../../config/autoload.php');
 // session_start();
-
+if(isset($username))
+{
+    echo"<script> location.replace('../header.php'); </script>";
+}
+else{
+         // $msg="invalid username or password";
+			
+				echo "<script> alert('Invalid username or password');</script> ";
+        }     
 $dao = new DataAccess();
 
 $elements = ["username" => "", "password" => ""];

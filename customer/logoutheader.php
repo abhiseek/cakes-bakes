@@ -72,11 +72,11 @@ $user=$_SESSION['fname'];
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="home.php">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
           <li><a href="displaycategory.php">Menu</a></li>
-          <li><a href="#events">Events</a></li>
+          <!-- <li><a href="#events">Events</a></li>
           <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#gallery">Gallery</a></li> -->
           <li><a href="login/login.php">login</a></li>
           <li><a href="reg.php">registration</a></li>
            

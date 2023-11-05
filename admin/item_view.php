@@ -20,8 +20,8 @@ $dao=new DataAccess();
                         <th>item id</th>
                         <th>item name</th>
                         <th>item price</th>
-                        <th>item image</th>
                         <th>category id</th>
+                        <th>item image</th>
                         <th>EDIT/DELETE</th>
                      
                       
