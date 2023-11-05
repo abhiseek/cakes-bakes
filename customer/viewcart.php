@@ -12,7 +12,6 @@ $name=$_SESSION['email'] ;
 {
      echo "hai";
 	 echo"<script> location.replace('payment.php'); </script>";
-    //  echo"<script> location.replace('invoice.php'); </script>";
 }
    if(isset($_POST["purchase"]))
 {
@@ -106,3 +105,84 @@ TOTAL AMOUNT:
         </div><!-- End row -->
     </div><!-- End container -->
     </div><!-- End container_gray_bg -->
+<!-- 
+<form method="POST">
+    <button name="pay" class="clicky-button" id="myButton" <?=$msg1?>>PAY 0</button>
+    <input type="hidden" id="totalAmountInput" name="totalAmount" value="0">
+    <input type="hidden" name="arrayData" id="arrayData">
+</form>
+
+<script>
+    var mainCheckbox = document.querySelector('.js-check-all');
+    var checkboxes = document.querySelectorAll('.js-check-row');
+
+    mainCheckbox.addEventListener('change', function () {
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = mainCheckbox.checked;
+        });
+        calculateTotal();
+    });
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            mainCheckbox.checked = [...checkboxes].every(function (checkbox) {
+                return checkbox.checked;
+            });
+            calculateTotal();
+        });
+    });
+
+    function calculateTotal() {
+        var totalAmount = 0;
+        var data=[];
+        
+        
+        checkboxes.forEach(function (checkbox) {
+            if (checkbox.checked) {
+                var amount = parseFloat(checkbox.getAttribute('data-amount'));
+                totalAmount += amount;
+                var pid = parseFloat(checkbox.getAttribute('data-pid'));
+                var set1 = [pid,amount];
+                data.push(set1);
+                console.log(data);
+                var arrayJSON = JSON.stringify(data);
+                document.getElementById('arrayData').value =arrayJSON;
+
+
+
+            }
+        });
+
+        // Update the Total Amount on the button
+        updateButton(totalAmount);
+
+        // Update the hidden input field with the total amount
+        document.getElementById('totalAmountInput').value = totalAmount;
+    }
+
+    function updateButton(totalAmount) {
+        var displayTotalButton = document.getElementById('myButton');
+        if (totalAmount > 0) {
+            displayTotalButton.textContent = 'PAY ₹' + totalAmount;
+            displayTotalButton.removeAttribute('disabled');
+        } else {
+            displayTotalButton.textContent = 'PAY ₹0';
+            displayTotalButton.setAttribute('disabled', 'disabled');
+        }
+    }
+
+    // Calculate the initial total when the page loads
+    calculateTotal();
+</script>
+
+<?php
+// if (isset($_POST['pay'])) {
+    
+    
+//     $arrayJSON =$_POST['arrayData'];
+//     $arrayToStore = json_decode($arrayJSON, true);
+//     $_SESSION['myArray'] = serialize($arrayToStore);
+//    echo "<script> location.replace('../pay/pay.php'); </script>";
+// }
+?>
+    -->

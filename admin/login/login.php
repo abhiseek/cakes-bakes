@@ -22,17 +22,10 @@
                     </style> -->
   </head>
   <?php
+//session_start(); // Start the session
+
 require('../../config/autoload.php');
-// session_start();
-if(isset($username))
-{
-    echo"<script> location.replace('../header.php'); </script>";
-}
-else{
-         // $msg="invalid username or password";
-			
-				echo "<script> alert('Invalid username or password');</script> ";
-        }     
+
 $dao = new DataAccess();
 
 $elements = ["username" => "", "password" => ""];
@@ -49,16 +42,14 @@ if (isset($_POST['username'])) {
         $password = $_POST['password'];
 
         if ($username === "abhishek" && $password === "admin123") {
-            $_SESSION['username'] = $username;
-            
-              
-            
-            echo '<div class="c-formContainer c-welcome">Welcome aboard, '. $username .'!</div>';
-            echo '<script>
-                setTimeout(function(){
-                    window.location.href = "../header.php";
-                }, 1000);
-            </script>';
+            $_SESSION['username'] = $username; // Store the username in a session variable
+
+            echo '<div style="font-size: 30px; color: white; font-weight: bold;">Welcome aboard, '. $username .'!</div>';
+echo '<script>
+    setTimeout(function(){
+      window.location.href = "../header.php";
+    }, 1000);
+</script>';
             exit;
         } else {
             $msg = "Invalid username or password";
@@ -67,6 +58,7 @@ if (isset($_POST['username'])) {
     }
 }
 ?>
+
 
 
   <input class="c-checkbox" type="checkbox" id="start">
