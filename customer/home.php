@@ -409,7 +409,7 @@ else {include("logoutheaderhome.php");}
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href="https://www.instagram.com/abhish.3k/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/abhishek-pr-6a6005294/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -428,7 +428,7 @@ else {include("logoutheaderhome.php");}
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href="https://www.instagram.com/abhish.3k/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/abhishek-pr-6a6005294/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -447,7 +447,7 @@ else {include("logoutheaderhome.php");}
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href="https://www.instagram.com/abhish.3k/"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/abhishek-pr-6a6005294/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -693,7 +693,7 @@ else {include("logoutheaderhome.php");}
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com/abhish.3k/" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/abhishek-pr-6a6005294/" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
