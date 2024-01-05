@@ -39,12 +39,12 @@
 //require('../config/autoload.php'); 
 $dao=new DataAccess();
 $elements=array(
-        "dfname"=>"","dlname"=>"","demail"=>"","dphone"=>"","dpass"=>"","cpassword"=>"","id_img"=>"");
+        "dfname"=>"","dlname"=>"","demail"=>"","dphone"=>"","dpass"=>"","cpassword"=>"");
 
 
 $form=new FormAssist($elements,$_POST);
 $file=new FileUpload();
-$labels=array('dfname'=>"First Name","dlname"=>"Last Name","demail"=>"email Id","dphone"=>"phone Number","dpass"=>"password","cpassword"=>"Confirm password","id_img"=>"ID PROOF");
+$labels=array('dfname'=>"First Name","dlname"=>"Last Name","demail"=>"email Id","dphone"=>"phone Number","dpass"=>"password","cpassword"=>"Confirm password");
 
 $rules=array(
     "dfname"=>array("required"=>true,"minlength"=>3,"maxlength"=>30,"alphaspaceonly"=>true),
@@ -53,7 +53,6 @@ $rules=array(
     "dphone"=>array("required"=>true,"integeronly"=>true,"minlength"=>10,"maxlength"=>10),
     "dpass"=>array("required"=>true,"minlength"=>6),
     "cpassword"=>array("required"=>true,"compare"=>array("comparewith"=>"dpass","operator"=>"=")),
-    "id_img"=>array("filerequired"=>true)
 );
     
     
@@ -61,17 +60,14 @@ $validator = new FormValidator($rules,$labels);
 
 if(isset($_POST['register']))
 {
-    if($validator->validate($_POST))
-    {
-        if($filename=$file->doUploadRandom($_FILES['id_img'],array('.jpg','.png','.jpeg'),100000000,1,'../uploads'))	
-    {
+   
+    
         $data=array(
 				'dfname'=>$_POST['dfname'],
 				'dlname'=>$_POST['dlname'],
 				'dphone'=>$_POST['dphone'],
 				'demail'=>$_POST['demail'],
 				'dpass'=>$_POST['dpass'],
-                'id_img'=>$filename,
 				'dstatus'=>1
 			);
 			if($dao->insert($data,"d_reg"))
@@ -85,8 +81,6 @@ if(isset($_POST['register']))
 		}
     }
 			
-    }
-}
 
 if(isset($_POST['home']))
 {
@@ -127,11 +121,6 @@ if(isset($_POST['home']))
                            <span class="valErr"><?= $validator->error('dphone'); ?></span>
                         </div>
                                           
-                        <div class="input-group">
-                        <?= $form->fileField('id_img',array('class' => 'form-control')); ?>
-                        <span style="color:red;"><?= $validator->error('id_img'); ?></span>
-
-                        </div>
 
                          <div class="input-group">
                              <?= $form->passwordbox('dpass',array("placeholder"=>"Password")); ?>

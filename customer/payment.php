@@ -4,6 +4,10 @@
 <?php include("dbcon.php"); 
 session_start();
 ?>
+<?php
+		 $name=$_SESSION['email'] ;
+		//  echo $name;
+		 ?>
 	<script type="text/javascript">
 function validations()
 {
@@ -74,16 +78,17 @@ return false;
 
 <?php
 if(isset($_POST["next"]))
-{
-	// echo"<script> location.replace('printbill.php'); </script>";
-  echo"<script> location.replace('invoice.php'); </script>";
+{ $sql11 = "UPDATE cart SET status=2 WHERE status=1 and uemail='$name'";
+  if ($conn->query($sql11) === TRUE) {
+	echo"<script> location.replace('printbill.php'); </script>";
+  // echo"<script> location.replace('invoice.php'); </script>";
 	
 	 }
-
+   }
+   ?>
 
 	
-//onSubmit="return validations()" 
-?>
+
 	<form action=""  method="POST" onSubmit="return validations();"   enctype="multipart/form-data">
   <div class="checkout-panel">
     <div class="panel-body">
@@ -95,11 +100,7 @@ if(isset($_POST["next"]))
         <div class="step"></div>
         <div class="step"></div>
       </div>
-   <?php
-		//session_start();
-		 $name=$_SESSION['email'] ;
-		 echo $name;
-		 ?>
+   
 
 
       <div class="payment-method">

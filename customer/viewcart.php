@@ -23,11 +23,12 @@ if(!isset($name))
 	   }
 	   else
 	   { 
-	   $sql = "select sum(total)as t from cart where status=1 and  uemail='$name'";
+	   $sql = "select sum(total)as t,cart_id from cart where status=1 and  uemail='$name'";
 $result = $conn->query($sql);
 	   $row = $result->fetch_assoc();
 	   $total=$row["t"];
 	   $_SESSION['amount']=$total; 
+       $_SESSION['cart_id']=$row["cart_id"]; 
        }
 	    ?>
        
